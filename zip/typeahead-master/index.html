@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- <html ng-app="firstChar"> -->
+
+<head>
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap.css" rel="stylesheet">
+    <link href="typeahead.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
+    <script src="typeahead.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body data-ng-controller="TypeaheadCtrl" data-ng-app="customTypeahead">
+    <div class="outer">
+        <div class="middle">
+            <div class="inner">
+
+                <input class="form-control width-100" id="inputId" type="text" ng-model="selected" typeahead="name for name in getSuggestion($viewValue)" typeahead-on-select="typeaheadOnSelect($item)" ng-trim="false" typeahead-loading="loadingTypeahead" placeholder="Start typing...">
+
+                <!-- This dummy span is used for dynamic calculation of the input text width in pixels,in order to set the typeahead popup dynamically below the cursor -->
+                <span id="inputText" style="visibility:hidden;display: inline-block;">{{selected}}</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

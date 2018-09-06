@@ -1,0 +1,44 @@
+<?php include 'common/sidebar.php'?>
+<!-- navbar -->
+<div class="w3-col l10 m12 s12 w3-right">
+<div class="w3-container w3-bar w3-light-gray w3-text-gray w3-card w3-display-container">
+	<a class="w3-button w3-hover-none w3-hover-text-blue"><i class="material-icons w3-display-left">&nbsp;&nbsp;menu</i></a>
+	<h2 class="w3-bar-item">&nbsp;&nbsp;IPCR</h2>
+</div>
+<div class="w3-container"><br>
+	<div class="w3-bar w3-round-large w3-card">
+		<div class="w3-bar-item w3-container w3-col l9">
+			<h2>Last Evaluation</h2>
+			<h4>January 28, 2017</h4>
+			<br>
+			<div class="w3-bar w3-light-gray">
+				<a class="w3-bar-item w3-button" onclick="p_tab('table')">Table</a>
+				<a class="w3-bar-item w3-button" onclick="p_tab('chart')">Chart</a>
+				<a class="w3-bar-item w3-button" onclick="p_tab('result')">Result</a>
+			</div>
+
+			<div id="table" class="w3-container p-tab-content">
+				<h2>table</h2>
+				<p>table</p>
+			</div>
+
+			<div id="chart" class="w3-container p-tab-content" style="display:none">
+				<h2>chart</h2>
+				<p>chart</p> 
+			</div>
+
+			<div id="result" class="w3-container p-tab-content" style="display:none">
+				<h2>result</h2>
+				<p>result</p>
+			</div>
+
+		</div>
+		<div class="w3-bar-item w3-col l3 w3-right w3-blue">
+			<h2>Next Evaluation</h2>
+			<h4>January 28, 2018</h4>
+		</div>
+	</div>
+</div>
+<br>
+</div>
+<?php include 'common/footer.php'?>

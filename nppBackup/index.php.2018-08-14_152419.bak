@@ -1,0 +1,139 @@
+<?php include 'common/sidebar.php'?>
+<!-- navbar -->
+<div id="pContent" class="w3-col l10 m12 s12 w3-right">
+<div class="w3-container w3-bar w3-light-gray w3-text-gray w3-card w3-display-container">
+	<a id="pCloseSidebar" onclick="p_close_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:block;"><i class="material-icons w3-display-left">&nbsp;&nbsp;menu</i></a>
+	<a id="pOpenSidebar" onclick="p_open_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:none;"><i class="material-icons w3-display-left">&nbsp;&nbsp;close</i></a>
+	<h2 class="w3-bar-item">Home</h2>
+</div>
+<!-- main -->
+<div class="w3-col l10">
+	<!-- banner -->
+	<div class="w3-container w3-display-container w3-padding-64 w3-blue-gray w3-center" style="background: #808080;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #3fada8, #808080);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #3fada8, #808080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	">
+	<div class="w3-display-topright w3-padding w3-gray w3-opacity">Hello</div>
+		<h1 class="w3-jumbo w3-center">Welcome to PAMS!</h1>
+	</div>
+	<br/>
+	<!-- squares -->
+	<div class="w3-row-padding">
+		<!-- square1 -->
+		<div class="w3-col l3">
+			<div class="w3-container w3-padding-16 w3-green w3-center">
+				<h1 class="w3-xlarge">Completed Projects</h1>
+				<h1 class="w3-xxxlarge">2089</h1>
+			</div>
+		</div>
+		<!-- square2 -->
+		<div class="w3-col l3">
+			<div class="w3-container w3-padding-16 w3-blue w3-center ">
+				<h1 class="w3-xlarge">Ongoing Projects</h1>
+				<h1 class="w3-xxxlarge">34</h1>
+			</div>
+		</div>
+		<!-- square3 -->
+		<div class="w3-center w3-col l3">
+			<div class="w3-container w3-padding-16 w3-red w3-center">
+				<h1 class="w3-xlarge">Incomplete Projects</h1>
+				<h1 class="w3-xxxlarge">1026</h1>
+			</div>
+		</div>
+		<!-- square3 -->
+		<div class="w3-center w3-col l3">
+			<div class="w3-container w3-padding-16 w3-blugray w3-center">
+				<h1 class="w3-xlarge">Project Completion</h1>
+				<h1 class="w3-xxxlarge">87%</h1>
+			</div>
+		</div>
+	</div>
+	<!-- tables -->
+	<div class="w3-container">
+		<div class="w3-container w3-half w3-center" style="">
+			<h2 class="">August</h2>
+			<div class="ct-chart ct-major-eleventh" id="chart"></div>
+			<h4 class="">This Month</h4>
+			<script>
+			// Initialize a Line chart in the container with the ID chart1
+			new Chartist.Bar('#chart', { 
+				labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5'],
+				series: [[100, 120, 180, 200, 300]],
+				}
+			);
+			</script>
+		</div>
+		<div class="w3-container w3-half w3-center" style="">
+			<h2 class="">2018</h2>
+			<div class="ct-chart ct-major-eleventh" id="chart2"></div>
+			<h4 class="">This Year</h4>
+			<script>
+			// Initialize a Line chart in the container with the ID chart1
+			new Chartist.Line('#chart2', {
+				labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+				series: [[5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8]]
+			}
+			);
+			</script>
+		</div>
+		<div class="w3-container w3-half w3-center w3-hide" style="">
+			<h2 class="">2018</h2>
+			<div class="ct-chart ct-major-eleventh" id="chart3"></div>
+			<h4 class="">This Year</h4>
+			<script>
+			var data = {
+			labels: ['Bananas', 'Apples', 'Grapes'],
+			series: [5, 3, 4]
+			};
+
+			var sum = function(a, b) { return a + b };
+
+			new Chartist.Pie('#chart3', data, {
+			labelInterpolationFnc: function(value) {
+			return Math.round(value / data.series.reduce(sum) * 100) + '%';
+			}
+			});
+			</script>
+		</div>
+	</div>
+</div>
+<!-- right sidebar -->
+<div class="w3-light-gray w3-col l2 w3-container w3-padding-16" style="height:970px">
+	<!-- date today -->
+	<div class="w3-container w3-padding w3-blue w3-round w3-center">
+		<h1 class="w3-xlarge">August</h1>
+		<h1 class="w3-xxxlarge">10</h1>
+	</div>
+	<br/>
+	<!-- Notes -->
+	<div class="" style="height:450px">
+	<h4><b>Reminders (3)</b><a href="#"><i class="material-icons w3-right w3-circle w3-blue-gray">add</i></a></h4>
+		<ul class="w3-ul">
+			<li>3 First Friday Mass</li>
+			<li>14 Jill's Birthday</li>
+			<li>28 Deadline of last Months Report</li>
+		</ul>
+		<a href="#" class="w3-right w3-hover-text-blue w3-text-blue-gray w3-small">View All</a>
+	</div>
+	<div class="">
+	<!-- online users -->
+	<h4><b>Active Users (3)</b></h4>
+		<ul class="w3-ul" style="padding: 5px 0px">
+			<li class="" style="padding: 5px 0px;">
+				<img src="src/img/ru/rum5.jpg" class="w3-circle w3-bar-item w3-hide-small"  style="padding: 0px; width:35px; border">
+				<span>Engr. Dela Fuentes</span>
+			</li>
+			<li class="" style="padding: 5px 0px;">
+				<img src="src/img/ru/ruf4.jpg" class="w3-circle w3-bar-item w3-hide-small"  style="padding: 0px; width:35px">
+				<span>Engr. Carmelita Torres</span>
+			</li>
+			<li class="" style="padding: 5px 0px;">
+				<img src="src/img/ru/ruf1.jpg" class="w3-circle w3-bar-item w3-hide-small"  style="padding: 0px; width:35px">
+				<span>Engr. May Alcantara</span>
+			</li>
+		</ul>
+		<a href="#" class="w3-right w3-hover-text-blue w3-text-blue-gray w3-small">View All</a>
+	</div>
+</div>
+</div>
+<?php include 'common/footer.php'?>

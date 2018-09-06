@@ -1,0 +1,112 @@
+<?php include 'common/sidebar.php'?>
+<!-- navbar -->
+<div id="pContent" class="w3-col l10 m12 s12 w3-right">
+<div class="w3-container w3-bar w3-light-gray w3-text-gray w3-card w3-display-container">
+	<a id="pCloseSidebar" onclick="p_close_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:block;"><i class="material-icons w3-display-left">&nbsp;&nbsp;menu</i></a>
+	<a id="pOpenSidebar" onclick="p_open_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:none;"><i class="material-icons w3-display-left">&nbsp;&nbsp;close</i></a>
+	<h2 class="w3-bar-item">Reports</h2>
+</div>
+<div class="w3-container w3-padding-32">
+	<div class="w3-round-large w3-card w3-text-blue-gray w3-row">
+		<div class="w3-col l6 m5 w3-red" style="margin:16px">
+			<a class="w3-button w3-text-blue-gray w3-hover-none">
+			<label>
+				<input name="group1" type="radio" onclick="show_monthly_option()" />
+				<span>Monthly</span>
+			<label>	
+			<label>
+				<input name="group1" type="radio" onclick="show_yearly_option()"/>
+				<span>Annual</span>
+			</label>
+			<label>
+				<input name="group1" type="radio" onclick="show_custom_option()"/>
+				<span>Custom</span>
+			</label>
+			</a>
+		</div>
+		<div class="w3-col l5">
+			<!-- select month-->
+			<div id="monthly" class="input-field" style="display:none; margin:20px 0 0 0">
+				<select style="margin:0px">
+					<option value="" selected>August</option>
+					<option value="1">September</option>
+					<option value="2">October</option>
+					<option value="3">November</option>
+				</select>
+				<label style="margin:0px">Select Month</label>
+			</div>
+			<!-- select year-->
+			<div id="annual" class="input-field" style="display:none; margin:20px 0 0 0">
+				<select style="margin:0px">
+					<option value="" selected>2018</option>
+					<option value="1">2017</option>
+					<option value="2">2016</option>
+					<option value="3">2015</option>
+				</select>
+				<label style="margin:0px">Select Year</label>
+			</div>
+			<!-- select range-->
+			<div class="row" id="custom" style="display:none;  margin:0px">
+				<div class="input-field col l6" style="margin:18px 0 0 0">
+					<input id="first_name" type="text" class="validate" style="margin:0px">
+					<label for="first_name">From</label>
+				</div>
+				<div class="input-field col l6" style="margin:18px 0 0 0">
+					<input id="last_name" type="text" class="validate" style="margin:0px">
+					<label for="last_name">To</label>
+				</div>
+			</div>
+			
+		</div>
+	</div><br>
+	
+	<div class="">
+		<div class="w3-container w3-half w3-center" style="">
+			<h2 class="">August</h2>
+			<div class="ct-chart ct-major-eleventh" id="chart"></div>
+			<h4 class="">This Month</h4>
+			<script>
+			// Initialize a Line chart in the container with the ID chart1
+			new Chartist.Bar('#chart', {
+				labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5'],
+				series: [[100, 120, 180, 200, 300]],
+				}
+			);
+			</script>
+		</div>
+		<div class="w3-container w3-half w3-center" style="">
+			<h2 class="">2018</h2>
+			<div class="ct-chart ct-major-eleventh" id="chart2"></div>
+			<h4 class="">This Year</h4>
+			<script>
+			// Initialize a Line chart in the container with the ID chart1
+			new Chartist.Bar('#chart2', {
+				labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+				series: [[5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8]]
+			}
+			);
+			</script>
+		</div>
+	</div>	
+	<script>
+	function show_monthly_option(){
+		document.getElementById('monthly').style.display = 'block';
+		document.getElementById('annual').style.display = 'none';
+		document.getElementById('custom').style.display = 'none';
+	}
+	function show_yearly_option(){
+		document.getElementById('annual').style.display = 'block';
+		document.getElementById('monthly').style.display = 'none';
+		document.getElementById('custom').style.display = 'none';
+	}
+	function show_custom_option(){
+		document.getElementById('custom').style.display = 'block';
+		document.getElementById('monthly').style.display = 'none';
+		document.getElementById('annual').style.display = 'none';
+	}
+	</script>
+		
+	
+</div>
+</div>
+<?php include 'common/footer.php'?>

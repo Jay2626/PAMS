@@ -1,0 +1,85 @@
+<!-- modal add projects-->
+<div id="add_account" class="w3-modal">
+	<div class="w3-modal-content w3-card-4  w3-animate-zoom" style="opacity:1;">
+		<header class="w3-container w3-padding-16 w3-blue-gray"> 
+			<span onclick="p_close('add_account')" class="w3-button w3-display-topright">&times;</span>
+		<h2>Add SAO</h2>
+		</header>
+		<!-- main content -->
+		<div class="w3-container">
+		<br>
+		<div class="row">
+			<form class="col s12">
+			
+			<div class="row">
+				<div class="input-field col s6">
+				  <input value="PR-1234" id="ref_id" type="text" class="validate">
+				  <label for="ref_id">Reference NO</label>
+				</div>
+				<div class="input-field col s6">
+				  <input disabled value="SAO-1234" id="project_id" type="text" class="validate">
+				  <label for="project_id">SAO ID</label>
+				</div>
+			 </div>
+			  <div class="row">
+				<div class="input-field col s6">
+				  <input id="title" type="text" class="datepicker">
+				  <label for="title">Received Date</label>
+				</div>
+				<div class="input-field col s6">
+				  <input id="title" type="text" class="datepicker" value="6/7/2018" disabled>
+				  <label for="title">Entry Date</label>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="input-field col s6">
+				 <select class="icons">
+                  <option value="" disabled selected>Choose Officer</option>
+                  <option value="" data-icon="src/img/img_avatar3.png">June Hercules</option>
+                  <option value="" data-icon="src/img/img_avatar4.png">May Kulitis</option>
+                  <option value="" data-icon="src/img/img_avatar5.png">Augusta Dipper</option>
+                </select>
+                <label>Issuing Officer</label>
+				</div>
+				<div class="input-field col s6">
+				  <select class="icons" multiple>
+                  <option value="" disabled>Choose Officer(s)</option>
+                  <option value="" data-icon="src/img/img_avatar6.png">June Hercules</option>
+                  <option value="" data-icon="src/img/img_avatar4.png">May Kulitis</option>
+                  <option value="" data-icon="src/img/img_avatar5.png">Augusta Dipper</option>
+                </select>
+				  <label for="a_address">Assigned Personnel</label>
+				</div>
+			  </div>
+			  <div class="row">
+			  <div class="input-field col s6">
+                <select multiple>	
+                  <option value="" disabled>Select Type</option>
+                  <option value="1">Appraisal</option>
+                  <option value="2">Contract Review</option>
+                  <option value="3">Technical Inspection</option>
+                </select>
+                <label>Service Type</label>
+              </div>
+			   <div class="input-field col s6 w3-right">
+				<select multiple>	
+                  <option value="" disabled>Projects</option>
+                  <option value="1">P 1</option>
+                  <option value="2">P 2</option>
+                  <option value="3">P 3</option>
+                </select>
+				<label>Projects</label>
+			   </div>
+				</div>
+			
+			
+			</form>
+		  </div>
+		</div>
+		<footer class="w3-container w3-padding-16 w3-light-gray"> 
+		<button class="btn waves-effect waves-light w3-right w3-large" type="submit" name="action">Submit
+				<i class="material-icons right">send</i>
+			  </button>
+		</header>
+	</div>
+</div>

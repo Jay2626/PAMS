@@ -1,0 +1,235 @@
+<?php include 'common/sidebar.php'?>
+<div class="w3-col l10 m12 s12 w3-right">
+<!-- navbar -->
+<div class="w3-container w3-bar w3-light-gray w3-text-gray w3-card w3-display-container">
+	<a class="w3-button w3-hover-none w3-hover-text-blue"><i class="material-icons w3-display-left">&nbsp;&nbsp;menu</i></a>
+	<h2 class="w3-bar-item">&nbsp;&nbsp;SAO Records</h2>
+</div>
+<div class="w3-container">
+<br>
+<div class="w3-bar w3-round-large w3-card">
+	<a class="w3-bar-item w3-button w3-white w3-text-blue-gray"><i class="material-icons w3-medium">keyboard_arrow_left</i>Previous</a>
+	<a class="w3-bar-item w3-button w3-white w3-text-blue-gray">Next<i class="material-icons w3-medium">keyboard_arrow_right</i></a></a>
+	<a class="w3-bar-item w3-button w3-white">All</a>
+	<a class="w3-bar-item w3-button w3-white">Today</a>
+	<a class="w3-bar-item w3-button w3-white">This Month</a>
+	<a class="w3-bar-item w3-button w3-white dropdown-trigger" data-target='by-date-drop'>By Date</a>
+	<a class="w3-bar-item w3-button w3-blue-gray">By Status</a>
+	<!-- Dropdown Structure -->
+	
+</div>
+<ul id="by-date-drop" class="dropdown-content" style="width:500px !important">
+	<li><h3>Chose Month</h3></li>
+	<li><a href="#!">two asdfadfs  sdfds</a></li>
+	<li class="divider" tabindex="-1"></li>
+	<li><a href="#!">three</a></li>
+	<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+	<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+	</ul>
+<br>
+	<table  id="table_idx" class="dataTable w3-table w3-striped w3-responsive">
+		<thead class="w3-light-gray w3-text-black">
+		  <th>SAO ID</th>
+		  <th>Reference No</th>
+		  <th>Recieved Date</th>
+		  <th>Entry Date</th>
+		  <th style="width:30%">Projects</th>
+		  <th>Assigned Personnel</th>
+		  <th>Status</th>
+		  <th>Action</th>
+		</thead>		
+	
+		<tr class="w3-hover-light-gray">
+		  <td>SAO-1234</td>
+		  <td>RN-1234</td>
+		  <td>10/10/2017</td>
+		  <td>10/20/2017</td>
+		  <td>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu maximus augue. Quisque vel lacus eu metus pretium cursus sit amet in diam.
+			<span class="w3-text-blue w3-hover-text-red">&emsp;More <i class="material-icons w3-small">keyboard_arrow_down</i></span>
+		  </td>
+		  <td>
+			<a onclick="p_modal('p_details')" class="w3-hover-text-red">Juan Dela Cruz</a>
+			<br>
+			<a onclick="p_modal('p_details')" class="w3-hover-text-red">Maria Makiling</a>			
+		  </td>
+		  <td><span class="w3-tag w3-round-xlarge w3-blue">Ongoing</span></td>
+		  <td class="w3-center"><i class="material-icons" onclick="p_modal('pr_details')">keyboard_arrow_down</i></td>	
+	</table>
+		
+<!-- Personnel Details Modal -->
+<div id="p_details" class="w3-modal">
+	<div class="w3-modal-content w3-card w3-animate-top" style="opacity:1;">
+		<!-- main content -->
+		<div class="w3-col l12 w3-white w3-display-container">
+			<!-- left -->
+			<div class="w3-col l5">
+				<div class="w3-container w3-display-container w3-blue-gray w3-text-white" style="height:200px">
+						
+						<img class="w3-display-middle w3-image" src="src/img/img_nature.jpg" style="height:200px; width:600px;">
+						<!-- Account Picture-->
+						<div class="w3-gray w3-display-left w3-circle" style="height:80px; width:80px; margin-left:24px;">
+							<img class="w3-display-middle w3-circle" src="src/img/ru/ruf1.jpg" style="height:80px; width:80px;">
+						</div>
+						<!-- Full Name -->
+						<h3 class="w3-padding w3-display-bottomleft w3-center" style="text-shadow:2px 2px 5px #444;">Juan Dela Cruz</h3>
+						
+				</div>
+				<div class="w3-bar w3-container w3-light-gray w3-margin-none">
+						<h4><b>Basic Info</b></h4>
+						<ul class="w3-ul">
+						  <li>Birthdate<span class="w3-right">January 1, 1990</span></li>
+						  <li>Address<span class="w3-right">Rizal St., Legazpi City</span></li>
+						  <li>Mobile<span class="w3-right">+639134567890</span></li>
+						  <li>Email<span class="w3-right">juan_d@gmail.com</span></li>
+						</ul>
+						<h4><b>About</b></h4>
+						<p>A freelance web designer based at California, USA.</p>
+				</div>
+			</div>
+			<!-- left -->
+			<div class="w3-col l7">
+					<div class="w3-bar w3-light-gray w3-container">
+						<h2>Recent Projects</h2>
+					</div>
+					<!-- recent projects -->
+					<div class="w3-container w3-padding-16">
+						<div class="w3-card w3-round w3-container w3-padding-16">
+							<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							Nunc eu maximus augue. 
+							Quisque vel lacus eu metus pretium cursus sit amet in diam.
+							</p>
+						</div>
+						<br>
+						<div class="w3-card w3-round w3-container w3-padding-16">
+							<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							Nunc eu maximus augue. 
+							Quisque vel lacus eu metus pretium cursus sit amet in diam.
+							</p>
+						</div>
+						<br>
+					</div>
+			</div>
+		<span onclick="p_close('p_details')" class="w3-button w3-display-topright">&times;</span>
+		</div>	
+	</div>
+</div>
+
+<!-- Project Details Modal -->
+<div id="pr_details" class="w3-modal">
+	<div class="w3-modal-content w3-card w3-animate-top" style="opacity:1;">
+		<!-- main content -->
+		<div class="w3-col l12 w3-white w3-display-container">
+			<!-- left -->
+			<div class="w3-col l5">
+				<div class="w3-container w3-display-container w3-blue-gray w3-text-white" style="height:200px">					
+						<img class="w3-display-middle w3-image" src="src/img/img_nature.jpg" style="height:200px; width:600px;">
+						<h3 class="w3-padding w3-display-bottomleft w3-center" style="text-shadow:2px 2px 5px #444;">SAO-1234</h3>			
+				</div>
+				<div class="w3-bar w3-container w3-light-gray w3-margin-none">
+						<h4><b>Issuing Officer</b></h4>
+						<ul class="w3-ul">
+						  <li class="w3-bar">
+								<img src="src/img/ru/rum5.jpg" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+								<div class="w3-bar-item">
+									<span class="w3-large">Mike Marbles</span><br>
+									<span>TAS II</span>
+								</div>
+							</li>
+						</ul>
+						<h4><b>Assigned Officer</b></h4>
+						<ul class="w3-ul">
+							<li class="w3-bar">
+								<img src="src/img/ru/ruf1.jpg" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+								<div class="w3-bar-item">
+									<span class="w3-large">Mike Marbles</span><br>
+									<span>TAS II</span>
+								</div>
+							</li>
+							<li class="w3-bar">
+								<img src="src/img/ru/rum1.jpg" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+								<div class="w3-bar-item">
+									<span class="w3-large">Mary Cruz</span><br>
+									<span>TAS IV</span>
+								</div>
+							</li>
+							<li class="w3-bar">
+								<img src="src/img/ru/ruf2.jpg" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+								<div class="w3-bar-item">
+									<span class="w3-large">Anne Castro</span><br>
+									<span>TAS II</span>
+								</div>
+							</li>
+						</ul>	
+				</div>
+			</div>
+			<!-- left -->
+			<div class="w3-col l7">
+					<div class="w3-bar w3-light-gray w3-container">
+						<h2>All Projects</h2>
+					</div>
+					<!-- recent projects -->
+					<div class="w3-container w3-padding-16 p-scroll" style=" overflow:  auto; height: 550px;">
+						<div class="w3-card w3-round w3-container w3-padding-16 w3-display-container w3-pale-green">
+							<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							Nunc eu maximus augue. 
+							Quisque vel lacus eu metus pretium cursus sit amet in diam.
+							</p>
+							<span class="w3-display-bottomright w3-green w3-padding-small">Finished</span>
+						</div>
+						<br>
+						<div class="w3-card w3-round w3-container w3-padding-16 w3-display-container w3-pale-red">
+							<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							Nunc eu maximus augue. 
+							Quisque vel lacus eu metus pretium cursus sit amet in diam.
+							</p>
+							<span class="w3-display-bottomright w3-red w3-padding-small">Finished</span>
+						</div>
+						<br>
+						<div class="w3-card w3-round w3-container w3-padding-16">
+							<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							Nunc eu maximus augue. 
+							Quisque vel lacus eu metus pretium cursus sit amet in diam.
+							</p>
+							<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							Nunc eu maximus augue. 
+							Quisque vel lacus eu metus pretium cursus sit amet in diam.
+							</p>
+							<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							Nunc eu maximus augue. 
+							Quisque vel lacus eu metus pretium cursus sit amet in diam.
+							</p>
+							<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							Nunc eu maximus augue. 
+							Quisque vel lacus eu metus pretium cursus sit amet in diam.
+							</p>
+							<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							Nunc eu maximus augue. 
+							Quisque vel lacus eu metus pretium cursus sit amet in diam.
+							</p>
+							<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							Nunc eu maximus augue. 
+							Quisque vel lacus eu metus pretium cursus sit amet in diam.
+							</p>
+						</div>
+						<br>
+					</div>
+			</div>
+		<span onclick="p_close('pr_details')" class="w3-button w3-display-topright">&times;</span>
+		</div>	
+	</div>
+</div>
+</div>
+</div>
+
+<?php include 'common/footer.php'?>

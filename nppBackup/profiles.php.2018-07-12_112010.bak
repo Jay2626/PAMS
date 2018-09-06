@@ -1,0 +1,107 @@
+<?php include 'sidebar.php'?>
+<!-- topbar -->
+<div class="w3-container w3-bar w3-col l10 w3-right w3-card w3-light-gray w3-text-gray">
+	<h2 class="w3-bar-item">Profiles</h2>
+</div>
+<!-- main content -->
+<div class="w3-bar w3-right w3-container w3-col l10">
+<br>
+	<div class="w3-bar w3-round-large w3-card">
+	<a class="w3-bar-item w3-button w3-white w3-text-blue-gray"><i class="material-icons">person_add</i> Add</a>
+	</div>
+<br>
+<!-- table -->
+<table  id="table_idx" class="dataTable w3-table w3-striped">
+	<thead class="w3-light-gray w3-text-black">
+	  <th>Employee Id</th>
+	  <th>Fullname</th>
+	  <th>Position</th>
+	  <th>Username</th>
+	  <th>Action</th>
+	</thead>		
+	<tr class="w3-hover-light-gray">
+	  <td>ID-2018-1234</td>
+	  <td><img class="w3-circle" style="height:50px" src="src/img/ru/ruf4.jpg">&emsp;Juan Dela Cruz</td>
+	  <td>TAS I</td>
+	  <td>juandlc</td>
+	  <td></td>
+</table>
+<div class="w3-row-padding">
+	<div class="w3-col l2">
+		<div class="w3-display-container w3-hover-opacity">
+			<img class="w3-image" style="" src="src/img/ru/ruf1.jpg">
+			<div class="w3-display-bottomleft w3-bar w3-padding-small w3-text-white w3-image" style="text-shadowr:1px 1px 5px #111111; background: rgba(0, 0, 0, 0.2)">
+				<h5 style="margin:2px;">Anne Dela Cruz</h5>
+				<span><i class="material-icons w3-text-ble w3-medium">account_circle</i> TAS I</span>
+			</div>
+			<div class="w3-display-middle w3-display-hover">
+				<a class="w3-white w3-round-xlarge w3-button w3-hover-blue">Veiw<a>
+			</div>
+		</div>
+	</div>
+	<div class="w3-col l2">
+		<div class="w3-display-container w3-hover-opacity">
+			<img class="w3-image" style="" src="src/img/ru/rum1.jpg">
+			<div class="w3-display-bottomleft w3-bar w3-padding-small w3-text-white w3-image" style="text-shadowr:1px 1px 5px #111111; background: rgba(0, 0, 0, 0.2)">
+				<h5 style="margin:2px;">Anne Dela Cruz</h5>
+				<span><i class="material-icons w3-text-ble w3-medium">account_circle</i> TAS I</span>
+			</div>
+			<div class="w3-display-middle w3-display-hover">
+				<a class="w3-white w3-round-xlarge w3-button w3-hover-blue">Veiw<a>
+			</div>
+		</div>
+	</div>
+	<div class="w3-col l2">
+		<div class="w3-display-container w3-hover-opacity">
+			<img class="w3-image" style="" src="src/img/ru/ruf2.jpg">
+			<div class="w3-display-bottomleft w3-bar w3-padding-small w3-text-white w3-image" style="text-shadowr:1px 1px 5px #111111; background: rgba(0, 0, 0, 0.2)">
+				<h5 style="margin:2px;">Anne Dela Cruz</h5>
+				<span><i class="material-icons w3-text-ble w3-medium">account_circle</i> TAS I</span>
+			</div>
+			<div class="w3-display-middle w3-display-hover">
+				<a class="w3-white w3-round-xlarge w3-button w3-hover-blue">Veiw<a>
+			</div>
+		</div>
+	</div>
+	<div class="w3-col l2">
+		<div class="w3-display-container w3-hover-opacity">
+			<img class="w3-image" style="" src="src/img/ru/rum2.jpg">
+			<div class="w3-display-bottomleft w3-bar w3-padding-small w3-text-white w3-image" style="text-shadowr:1px 1px 5px #111111; background: rgba(0, 0, 0, 0.2)">
+				<h5 style="margin:2px;">Anne Dela Cruz</h5>
+				<span><i class="material-icons w3-text-ble w3-medium">account_circle</i> TAS I</span>
+			</div>
+			<div class="w3-display-middle w3-display-hover">
+				<a class="w3-white w3-round-xlarge w3-button w3-hover-blue">Veiw<a>
+			</div>
+		</div>
+	</div>
+	<div class="w3-col l2">
+		<div class="w3-display-container w3-hover-opacity">
+			<img class="w3-image" style="" src="src/img/ru/ruf3.jpg">
+			<div class="w3-display-bottomleft w3-bar w3-padding-small w3-text-white w3-image" style="text-shadowr:1px 1px 5px #111111; background: rgba(0, 0, 0, 0.2)">
+				<h5 style="margin:2px;">Anne Dela Cruz</h5>
+				<span><i class="material-icons w3-text-ble w3-medium">account_circle</i> TAS I</span>
+			</div>
+			<div class="w3-display-middle w3-display-hover">
+				<a class="w3-white w3-round-xlarge w3-button w3-hover-blue">Veiw<a>
+			</div>
+		</div>
+	</div>
+	<div class="w3-col l2">
+		<div class="w3-display-container w3-hover-opacity">
+			<img class="w3-image" style="" src="src/img/ru/rum3.jpg">
+			<div class="w3-display-bottomleft w3-bar w3-padding-small w3-text-white w3-image" style="text-shadowr:1px 1px 5px #111111; background: rgba(0, 0, 0, 0.2)">
+				<h5 style="margin:2px;">Anne Dela Cruz</h5>
+				<span><i class="material-icons w3-text-ble w3-medium">account_circle</i> TAS I</span>
+			</div>
+			<div class="w3-display-middle w3-display-hover">
+				<a class="w3-white w3-round-xlarge w3-button w3-hover-blue">Veiw<a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="w3-col l12">&emsp;</div>
+</div>
+<body>
+</html>

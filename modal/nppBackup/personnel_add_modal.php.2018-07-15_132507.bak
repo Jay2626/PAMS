@@ -1,0 +1,72 @@
+<!-- modal add projects-->
+<div id="add_personnel" class="w3-modal">
+	<div class="w3-modal-content w3-card-4  p-animate-top" style="opacity:1; width:800px;">
+		<header class="w3-container w3-padding-16 w3-blue-gray"> 
+			<span onclick="p_close('add_personnel')" class="w3-button w3-display-topright">&times;</span>
+		<h2>Add Account</h2>
+		</header>
+		<!-- main content -->
+		<div class="w3-container">
+		<br>
+		<div class="row">
+			<form>
+			<div class="input-field col s4">
+				<input type="text" />
+				<label>Firstname</label>
+			</div>
+			<div class="input-field col s4">
+				<input type="text" />
+				<label>Middlename</label>
+			</div>
+			<div class="input-field col s4">
+				<input type="text" />
+				<label>Lastname</label>
+			</div>
+			<div class="input-field col s4">
+				<input type="text" />
+				<label>Employee ID</label>
+			</div>
+			<div class="input-field col s4">
+				<input type="text" />
+				<label>Sex</label>
+			</div>
+			<div class="input-field col s4">
+				<input type="text" />
+				<label>Date of Birth</label>
+			</div>
+			<div class="input-field col s4">
+				<select class="icons" multiple>
+					<option value="" disabled>Choose</option>
+					<option value="" data-icon="src/img/ru/rum1.jpg">TAS I</option>
+					<option value="" data-icon="src/img/ru/ruf2.jpg">TAS II</option>
+					<option value="" data-icon="src/img/ru/ruf1.jpg">TAS III</option>
+				</select>
+				<label>Choose Position</label>
+			</div>
+			<div class="input-field col s4">
+				<select class="icons" multiple>
+					<option value="" disabled>Choose</option>
+					<option value="" data-icon="src/img/ru/rum1.jpg">TAS I</option>
+					<option value="" data-icon="src/img/ru/ruf2.jpg">TAS II</option>
+					<option value="" data-icon="src/img/ru/ruf1.jpg">TAS III</option>
+				</select>
+				<label>Choose Position</label>
+			</div>
+			<div class="file-field input-field col s4">
+				<div class="btn">
+					<span>File</span>
+					<input type="file">
+				</div>
+				<div class="file-path-wrapper">
+					<input class="file-path validate" type="photo">
+				</div>
+			</div>
+			</form>
+		  </div>
+		</div>
+		<footer class="w3-container w3-padding-16 w3-light-gray"> 
+		<button class="btn waves-effect waves-light w3-right w3-large" type="submit" name="action"><i class="material-icons right">person_add</i> Create
+		</button>
+		</header>
+	</div>
+</div>

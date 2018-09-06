@@ -1,0 +1,116 @@
+<?php include 'common/sidebar.php'?>
+<!-- navbar -->
+<div id="pContent" class="w3-col l10 m12 s12 w3-right">
+<div class="w3-container w3-bar w3-light-gray w3-text-gray w3-card w3-display-container">
+	<a id="pCloseSidebar" onclick="p_close_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:block;"><i class="material-icons w3-display-left">&nbsp;&nbsp;menu</i></a>
+	<a id="pOpenSidebar" onclick="p_open_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:none;"><i class="material-icons w3-display-left">&nbsp;&nbsp;close</i></a>
+	<h2 class="w3-bar-item">Projects</h2>
+</div>
+	<div class="w3-blue w3-container" style="padding:0px">
+		<div class="w3-col l3 w3-container">
+			<span class="w3-half w3-blue">Hello</span>
+			<span class="w3-half w3-red">Hello</span>
+			<span class="w3-half w3-green" style="height:50%">Hello</span>
+			
+			
+			
+		</div>
+		<div class="w3-col l9" style="position: relative;  height: 200px; overflow: hidden;">
+			<img class="" src="src/img/m8.jpg" style="position: absolute; max-width: 100%;width: 100%; height: auto;top: 80%; left: 50%;transform: translate( -50%, -50%);">
+		</div>
+	</div>
+	<div class="w3-container"><br>
+		<div class="w3-bar w3-round-large w3-card">
+			<a onclick="p_modal('add_project')" class="waves-effect w3-bar-item w3-button w3-text-blue-gray">
+			<i class="material-icons w3-medium">add</i> New Project</a>
+			<?php include 'modal/projects_modal.php'?>
+			<a class="w3-bar-item w3-button w3-text-blue-gray"><i class="material-icons w3-medium">keyboard_arrow_left</i>Previous</a>
+			<a class="w3-bar-item w3-button w3-text-blue-gray">Next<i class="material-icons w3-medium">keyboard_arrow_right</i></a>
+			<a class="w3-bar-item w3-button w3-text-blue-gray">All</a>
+			<a class="w3-bar-item w3-button w3-text-blue-gray">Today</a>
+			<a class="w3-bar-item w3-button w3-text-blue-gray">This Month</a>
+			<a class="w3-bar-item w3-button w3-text-blue-gray dropdown-trigger" data-target='by-date-drop'>By Date</a>
+			<a class="w3-bar-item w3-button  w3-text-blue-gray">By Status</a>	
+		</div>
+		<!-- Dropdown Structure -->
+		<ul id="by-date-drop" class="dropdown-content" style="width:500px !important">
+			<li><h3>Choose Month</h3></li>
+			<li><a href="#!">two asdfadfs  sdfds</a></li>
+			<li class="divider" tabindex="-1"></li>
+			<li><a href="#!">three</a></li>
+			<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+			<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+		</ul>
+		<div class="w3-container w3-panel w3-responsive">
+			<table  id="table_idx" class="dataTable w3-striped">
+				<tr class="">
+					<th class="">
+						<label>
+							<input id="select_all" type="checkbox" />
+							<span></span>
+						</label>
+					</th>
+					<th>Project Title</th>
+					<th>Location</th>
+					<th>Contractor</th>
+					<th style="width:15%">Cost</th>
+					<th>Agency</th>
+					<th>Type</th>
+					<th>Action</th>
+				</tr>
+				<tr class="">
+					<td>
+						<label>
+							<input class="checkbox" type="checkbox"/>
+							<span></span>
+						</label>
+					</td>
+					<td>Multi-purpose Building</td>
+					<td>Rawis, Legazpi City </td>
+					<td>BU Builders</td>
+					<td>Php. 2, 741, 005.81</td>
+					<td>DepEd</td>
+					<td>Infrastracture</td>
+					<td class="w3-center"><i class="material-icons">expand_more</i></td>
+				</tr>
+				<tr class="">
+					<td>
+						<label>
+							<input class="checkbox" type="checkbox"/>
+							<span></span>
+						</label>
+					</td>
+					<td>Repair and Rehabilitation of Basud Bridge</td>
+					<td>Basud, Sto. Domingo Albay</td>
+					<td>Maria Angela Construction and Supply</td>
+					<td>Php. 3, 840, 123.60</td>
+					<td>DepEd</td>
+					<td>Infrastracture</td>
+					<td class="w3-center"><i class="material-icons">expand_more</i></td>
+				</tr>
+				<tr class="">
+					<td>
+						<label>
+							<input class="checkbox" type="checkbox"/>
+							<span></span>
+						</label>
+					</td>
+					<td>Recontruction of Daraga Underground Flood Control System</td>
+					<td>Daraga Albay</td>
+					<td>Genisis Groundworks</td>
+					<td>Php. 28, 603, 960.18</td>
+					<td>DepEd</td>
+					<td>Infrastracture</td>
+					<td class="w3-center"><i class="material-icons">expand_more</i></td>
+				</tr>
+				<?php $var ='
+				';
+				for($x= 0; $x<0; $x++){
+					echo $var;
+				}
+				?>	
+			</table>
+		</div>
+	</div>
+</div>
+<?php include 'common/footer.php'?>

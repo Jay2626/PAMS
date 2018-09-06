@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+<title>PAMS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="src/css/w3.css">
+	<link rel="stylesheet" href="src/css/pams.css">
+	<!-- jQuery -->
+	<script src="src/js/jquery-3.3.1.min.js"></script>
+	<!-- Materialize-->
+	<link rel="stylesheet" href="src/css/materialize.css">
+	<script src="src/js/materialize.js"></script>
+	<script src="src/js/init.js"></script>
+	<!-- icons -->
+	<link rel="stylesheet" href="src/icons/material-icons/material-icons.css">
+	
+</head>
+<body class=""
+style="background: #aa4b6b;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+<!---background-image: url('src/img/coa_bg30.png');
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;-->
+">
+
+	
+	<!-- login -->
+	<div class="w3-display-middle w3-col l3 m6 s12 w3-card-4 w3-round-large w3-white" style="opacity:1; padding:16px;">
+		<!-- middle -->
+		<div class="w3-container w3-text-dark-gray">
+		<h3 class="w3-hide" onclick="changeText(this)"><span class="w3-text-red"><b>P</b></span>
+			<span class="w3-text-blue"><b>A</b></span>
+			<span class="w3-text-red"><b>M</b><span>
+			<span class="w3-text-blue"><b>S</b></span></h3>
+			<script>
+			function changeText(id) {
+			id.innerHTML = "";
+			}
+			</script>
+			<h5 class="w3-justify">
+			<span class="w3-text-blue-gray">Project</span>
+			<span class="w3-text-blue">Assignment</span>
+			<br>
+			<span class="w3-text-red">Management</span>
+			<span class="w3-text-gray">System</span>
+			</h5>
+		</div>
+		<div class="w3-container w3-padding-16 w3-text-dark-gray">
+			<h5>Sign in</h5>
+			<p>with your account</p>
+		</div>
+		<div class="w3-panel w3-red w3-display-container">
+			<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">X</span>
+			<p>Error! Incorrect username or password</p>
+		</div> 
+		<form id="" method="post" action="function/submit_login.php" class="w3-container ">
+			<div class="input-field">
+				<input id="u" name="username" type="text" class="validate" autofocus>
+				<label for="u">Username</label>
+			</div>
+			<div class="input-field">
+				<input id="p" name="password" type="password" class="validate">
+				<label for="p">Password</label>
+			</div>
+			<br>
+			<div class="w3-bar">
+			<a class="w3-text-gray">Forgot password?</a>
+			<button type="submit" class="w3-button w3-round w3-right w3-card w3-blue">LOGIN</button>
+			</div>
+			<br><br>
+		</form>
+	</div>
+</body>
+
+</html>

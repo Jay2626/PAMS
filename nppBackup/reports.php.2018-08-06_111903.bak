@@ -1,0 +1,36 @@
+<?php include 'common/sidebar.php'?>
+<!-- navbar -->
+<div id="pContent" class="w3-col l10 m12 s12 w3-right">
+<div class="w3-container w3-bar w3-light-gray w3-text-gray w3-card w3-display-container">
+	<a id="pCloseSidebar" onclick="p_close_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:block;"><i class="material-icons w3-display-left">&nbsp;&nbsp;menu</i></a>
+	<a id="pOpenSidebar" onclick="p_open_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:none;"><i class="material-icons w3-display-left">&nbsp;&nbsp;close</i></a>
+	<h2 class="w3-bar-item">Reports</h2>
+</div>
+<div class="w3-bar w3-container">
+	<h2 class="w3-bar-item">Hello</h2>
+	<div class="w3-container w3-center" >
+		<div class="ct-chart ct-major-eleventh" id="chart"></div>
+		
+		<script>
+		
+		var data = {
+  // A labels array that can contain any sort of values
+  labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+  // Our series array that contains series objects or in this case series data arrays
+  series: [
+    [5, 2, 4, 2, 0]
+  ]
+};
+
+// As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
+// as you saw in the previous example
+var options = {
+  width: 300,
+  height: 200
+};
+		new Chartist.Bar('.ct-chart', data, options);
+		</script>
+	</div>
+</div>
+</div>
+<?php include 'common/footer.php'?>

@@ -1,0 +1,62 @@
+<?php include 'common/sidebar.php'?>
+<!-- navbar -->
+<div id="pContent" class="w3-col l10 m12 s12 w3-right">
+<div class="w3-container w3-bar w3-light-gray w3-text-gray w3-card w3-display-container">
+	<a id="pCloseSidebar" onclick="p_close_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:block;"><i class="material-icons w3-display-left">&nbsp;&nbsp;menu</i></a>
+	<a id="pOpenSidebar" onclick="p_open_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:none;"><i class="material-icons w3-display-left">&nbsp;&nbsp;close</i></a>
+	<h2 class="w3-bar-item">Reports</h2>
+</div>
+<div class="w3-bar w3-container w3-padding-32">
+
+		<div class="w3-container w3-half w3-center" style="">
+			<h2 class="">August</h2>
+			<div class="ct-chart ct-major-eleventh" id="chart"></div>
+			<h4 class="">This Month</h4>
+			<script>
+			// Initialize a Line chart in the container with the ID chart1
+			new Chartist.Bar('#chart', {
+				labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5'],
+				series: [[100, 120, 180, 200, 300]],
+				}
+			);
+			</script>
+		</div>
+		<div class="w3-container w3-half w3-center" style="">
+			<h2 class="">2018</h2>
+			<div class="ct-chart ct-major-eleventh" id="chart2"></div>
+			<h4 class="">This Year</h4>
+			<script>
+			// Initialize a Line chart in the container with the ID chart1
+			new Chartist.Bar('#chart2', {
+				labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+				series: [[5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8]]
+			}
+			);
+			</script>
+		</div>
+		<div class="w3-bar w3-padding w3-col l3 w3-center w3-light-gray w3-borrder w3-round-xlarge">
+			<h3 class="w3-padding">Create Report</h3>
+			<form action="#">
+				<div class="w3-padding">			
+					<label>
+						<input name="group1" type="radio" checked />
+						<span>Monthly</span>
+					</label>
+					<label>
+						<input name="group1" type="radio" />
+						<span>Annual</span>
+					</label>
+					<label>
+						<input name="group1" type="radio" />
+						<span>Custom</span>
+					</label>
+				</div>
+				<div class="w3-padding-16">
+					<button class="w3-button w3-blue-gray" type="submit">Create</button>
+				</div>
+			</form>
+		</div>
+	
+</div>
+</div>
+<?php include 'common/footer.php'?>

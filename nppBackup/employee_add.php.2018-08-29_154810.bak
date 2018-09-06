@@ -1,0 +1,107 @@
+<?php include 'common/sidebar.php'?>
+<!-- navbar -->
+<div id="pContent" class="w3-col l10 m12 s12 w3-right">
+<div class="w3-container w3-bar w3-light-gray w3-text-gray w3-card w3-display-container">
+	<a id="pCloseSidebar" onclick="p_close_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:block;"><i class="material-icons w3-display-left">&nbsp;&nbsp;menu</i></a>
+	<a id="pOpenSidebar" onclick="p_open_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:none;"><i class="material-icons w3-display-left">&nbsp;&nbsp;close</i></a>
+	<h2 class="w3-bar-item">Add Employee</h2>
+</div>
+		<?php if (isset($_GET['error']) && $_GET['error'] == '1') { ?>
+		<div class="w3-margin w3-panel w3-red w3-display-container w3-round-large w3-small	" role="alert">
+			<span onclick="this.parentElement.style.display='none'" class="w3-button w3-circle w3-hover-none w3-display-right"><i class="material-icons">close</i></span>
+			<p>Error! Incorrect username or password</p>
+		</div> 
+		<?php } ?>
+<div class="w3-container w3-padding-32">
+	<div class="w3-container w3-round-large w3-padding">
+		<form action="function/employees/add_employees.php" method="post">
+			<h2 class="">Personal Details</h2>
+			
+			<div class="w3-col l6">
+				<div class="row">
+					<div class="input-field col l4">
+						<input name="fn" id="f" type="text" />
+						<label for="f">Firstname</label>
+					</div>
+					<div class="input-field col l4">
+						<input name="mn" id="m" type="text" />
+						<label for="m">Middlename</label>
+					</div>
+					<div class="input-field col l4">
+						<input name="ln" id="l" type="text" />
+						<label for="l">Lastname</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col l4">
+						<select name="sex" class="icons">
+							<option value="" disabled>Select Sex</option>
+							<option value="" data-icon="src/img/ru/rum1.jpg">Male</option>
+							<option value="" data-icon="src/img/ru/ruf2.jpg">Female</option>
+						<select>
+					<label>Choose Position</label>
+					</div>
+					<div class="input-field col l4">
+						<input name="position" id="d" type="text" class="datepicker"/>
+						<label for="d">Date of Birth</label>
+					</div>
+					<div class="input-field col l4">
+						<select name="ms" class="icons">
+							<option value="" disabled>Select Status</option>
+							<option value="" data-icon="src/img/ru/rum1.jpg">Single</option>
+							<option value="" data-icon="src/img/ru/ruf2.jpg">Married</option>
+							<option value="" data-icon="src/img/ru/ruf2.jpg">Separated</option>
+							<option value="" data-icon="src/img/ru/ruf2.jpg">Divorced</option>
+							<option value="" data-icon="src/img/ru/ruf2.jpg">Widowed</option>
+						<select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col l6">
+						<input name="ha"  id="ha" type="text"/>
+						<label for="ha">Home Address</label>
+					</div>
+					<div class="input-field col l6">
+						<input  name="ca" id="ca" type="text"/>
+						<label for="ca">Current Address</label>
+					</div>
+				</div>
+			
+				<br>
+				<div class="input-field">
+					<select class="icons" multiple>
+						<option value="" disabled>Choose</option>
+						<option value="" data-icon="src/img/ru/rum1.jpg">TAS I</option>
+						<option value="" data-icon="src/img/ru/ruf2.jpg">TAS II</option>
+						<option value="" data-icon="src/img/ru/ruf1.jpg">TAS III</option>
+					</select>
+					<label>Choose Position</label>
+				</div>
+				<br>
+				<div class="input-field">
+					<select class="icons" multiple>
+						<option value="" disabled>Choose</option>
+						<option value="" data-icon="src/img/ru/rum1.jpg">TAS I</option>
+						<option value="" data-icon="src/img/ru/ruf2.jpg">TAS II</option>
+						<option value="" data-icon="src/img/ru/ruf1.jpg">TAS III</option>
+					</select>
+					<label>Choose Position</label>
+				</div>
+				<div class="file-field input-field w3-hide">
+					<div class="btn">
+						<span>File</span>
+						<input type="file">
+					</div>
+					<div class="file-path-wrapper">
+						<input class="file-path validate" type="text">
+					</div>
+				</div>
+			</div>
+			<input type="submit">
+		</form>
+	</div>
+</div>
+</div>
+<body>
+</html>
+<?php include 'common/footer.php'?>

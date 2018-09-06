@@ -1,0 +1,65 @@
+<body>
+</html>
+<script>
+//for custom scrollbar
+$(".p-scroll")
+.niceScroll({
+	cursorcolor:"#dddddd", 
+	cursorwidth:"12px", 
+	background:"#f1f1f1",
+	opacity:"0.9", 
+	cursorborder:"0px solid #ddd", 
+	cursorborderradius:"5px",
+	});
+//datatable
+$(document).ready(function(){
+	$('#table_id').DataTable();
+});
+//modal open
+function p_modal(id) {
+document.getElementById(id).style.display='block';
+}
+//modal close
+function p_close(id) {
+document.getElementById(id).style.display='none';
+}
+//for page resposiveness
+function p_open_small_sidebar() {
+    document.getElementById("pSidebar").style.display = "block";
+	document.getElementById("pSidebar").classList.remove("w3-hide-small");
+	document.getElementById("pContent").classList.add("w3-right");
+	document.getElementById("pContent").classList.add("m9");
+	document.getElementById("pContent").classList.remove("m12");
+	document.getElementById("pContent").classList.add("l10");
+	document.getElementById("pContent").classList.remove("l12");
+	document.getElementById("pCloseSidebar").style.display = "block";
+	document.getElementById("pOpenSidebar").style.display = "none";
+}
+function p_close_small_sidebar() {
+    document.getElementById("pSidebar").style.display = "none";
+	document.getElementById("pContent").classList.remove("w3-right");
+	document.getElementById("pContent").classList.remove("m9");
+	document.getElementById("pContent").classList.add("m12");
+	document.getElementById("pContent").classList.remove("l10");
+	document.getElementById("pContent").classList.add("l12");
+	document.getElementById("pCloseSidebar").style.display = "none";
+	document.getElementById("pOpenSidebar").style.display = "block";
+}
+
+function p_open_big_sidebar() {
+    document.getElementById("pSidebar").style.display = "block";
+	document.getElementById("pContent").classList.add("w3-right");
+	document.getElementById("pContent").classList.add("l10");
+	document.getElementById("pContent").classList.remove("l12");
+	document.getElementById("pCloseSidebar").style.display = "block";
+	document.getElementById("pOpenSidebar").style.display = "none";
+}
+function p_close_big_sidebar() {
+    document.getElementById("pSidebar").style.display = "none";
+	document.getElementById("pContent").classList.remove("w3-right");
+	document.getElementById("pContent").classList.remove("l10");
+	document.getElementById("pContent").classList.add("l12");
+	document.getElementById("pCloseSidebar").style.display = "none";
+	document.getElementById("pOpenSidebar").style.display = "block";
+}
+</script>

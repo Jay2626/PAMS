@@ -1,0 +1,43 @@
+<!-- modal add projects-->
+<div id="add_account" class="w3-modal" style="width:;">
+	<div class="w3-modal-content w3-card-4  w3-animate-zoom" style="opacity:1; width:400px;">
+		<header class="w3-container w3-padding-16 w3-blue-gray"> 
+			<span onclick="p_close('add_account')" class="w3-button w3-display-topright">&times;</span>
+		<h2><i class="material-icons">add</i> Add Account</h2>
+		</header>
+		<!-- main content -->
+		<div class="w3-container">
+		<br>
+		<div class="row">
+			<form class="col s12">
+			  
+			<div class="input-field col s12">
+				<select class="icons">
+					<option value="" disabled>Choose Personnel</option>
+					<option value="" data-icon="src/img/ru/rum1.jpg">June Hercules</option>
+					<option value="" data-icon="src/img/ru/ruf2.jpg">May Kulitis</option>
+					<option value="" data-icon="src/img/ru/ruf1.jpg">Augusta Dipper</option>
+				</select>
+				<label>Choose Personnel</label>
+			</div>
+
+			<div class="input-field col s12">
+				<select multiple>	
+					<option value="" disabled>Select Type</option>
+					<option value="1">Employee</option>
+					<option value="2">Contract Review</option>
+					<option value="3">Technical Inspection</option>
+				</select>
+				<label>Account Type</label>
+			</div>
+
+			</form>
+		  </div>
+		</div>
+		<footer class="w3-container w3-padding-16 w3-light-gray"> 
+		<button class="btn waves-effect waves-light w3-right w3-large" type="submit" name="action">Submit
+				<i class="material-icons right">send</i>
+			  </button>
+		</header>
+	</div>
+</div>

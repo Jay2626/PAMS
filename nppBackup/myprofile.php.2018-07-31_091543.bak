@@ -1,0 +1,112 @@
+<?php include 'common/sidebar.php'?>
+<!-- navbar -->
+<div id="pContent" class="w3-col l10 m12 s12 w3-right">
+<div class="w3-container w3-bar w3-light-gray w3-text-gray w3-card w3-display-container">
+	<a id="pCloseSidebar" onclick="p_close_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:block;"><i class="material-icons w3-display-left">&nbsp;&nbsp;menu</i></a>
+	<a id="pOpenSidebar" onclick="p_open_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:none;"><i class="material-icons w3-display-left">&nbsp;&nbsp;close</i></a>
+	<h2 class="w3-bar-item">My Profile</h2>
+</div>
+	<div class="w3-col l8">
+		<!-- cover -->
+		<div class="w3-center w3-dark-gray w3-display-container w3-padding-48" 
+		style="
+		padding: 20px 0 5px 0; 
+		background-image:url('src/img/banner2.jpg'); 
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;">
+			<img class="w3-image w3-circle w3-card" src="src/img/ru/rum4.jpg" style="height:130px">
+			<h2 class="">Juan Dela Cruz</h2>
+		</div>
+		<div class="w3-bar w3-light-gray w3-border-left">
+			<h2 class="w3-bar-item">Recent Projects</h2>
+		</div>
+		
+		<div class="w3-bar w3-light-gray">
+			<a class="w3-bar-item w3-button" onclick="p_tab('list')">List</a>
+			<a class="w3-bar-item w3-button" onclick="p_tab('cat')">Categories</a>
+		</div>
+		<!-- list -->
+		<div class="w3-container p-tab-content" id="list">
+			<table>
+				<thead>
+					<th>Description</th>
+					<th>Status</th>
+					<th>Action</th>
+				</thead>
+			<tr>
+				<td>Multi-purpose Fuction Hall For Daraga National High School, worth Php. 1, 560, 000.00</td>
+				<td><span class="w3-tag w3-blue w3-round-xlarge">Ongoing</span></td>
+				<td><a href="project_detail.php" class="w3-text-blue">View Details</a></td>
+			</tr>
+			<tr>
+				<td>1.2km Suspession Bridge across Yawa River, worth Php. 3, 990, 000.00</td>
+				<td><span class="w3-tag w3-green w3-round-xlarge">Completed</span></td>
+				<td><a href="project_detail.php" class="w3-text-blue">View Details</a></td>
+			</tr>
+			</table>
+		</div>
+		<!-- categories -->
+		<div id="cat" class="w3-container p-tab-content w3-padding-16">
+			<div class="w3-row-padding">
+				<div class="w3-col l2 w3-blue">g</div>
+			</div>
+		</div>
+		<div class="w3-bar w3-light-gray">
+				<a class="w3-bar-item w3-button" onclick="p_tab('table')">Table</a>
+				<a class="w3-bar-item w3-button" onclick="p_tab('chart')">Chart</a>
+				<a class="w3-bar-item w3-button" onclick="p_tab('result')">Result</a>
+			</div>
+
+			<div id="table" class="w3-container p-tab-content">
+<table>
+				<thead>
+					<th>Description</th>
+					<th>Status</th>
+					<th>Action</th>
+				</thead>
+			<tr>
+				<td>Multi-purpose Fuction Hall For Daraga National High School, worth Php. 1, 560, 000.00</td>
+				<td><span class="w3-tag w3-blue w3-round-xlarge">Ongoing</span></td>
+				<td><a href="project_detail.php" class="w3-text-blue">View Details</a></td>
+			</tr>
+			<tr>
+				<td>1.2km Suspession Bridge across Yawa River, worth Php. 3, 990, 000.00</td>
+				<td><span class="w3-tag w3-green w3-round-xlarge">Completed</span></td>
+				<td><a href="project_detail.php" class="w3-text-blue">View Details</a></td>
+			</tr>
+			</div>
+
+			<div id="chart" class="w3-container p-tab-content" style="display:none">
+				<h2>chart</h2>
+				<p>chart</p> 
+			</div>
+
+	</div>
+
+	<div class="w3-col l4 w3-container w3-padding w3-large w3-blue-gray" style="">
+		<h3><b>Basic Info</b></h3>
+		<ul class="w3-ul">
+			<li>Fullname<span class="w3-right">Juan Dela Cruz</span></li>
+			<li>Date of Birth<span class="w3-right">January 1, 1990</span></li>
+			<li>Age<span class="w3-right">24</span></li>
+			<li>Sex<span class="w3-right">Male</span></li>
+			<li>Position<span class="w3-right">TAS I</span></li>
+		</ul>
+		<h3><b>Contact Details</b></h3>
+		<ul class="w3-ul">
+			<li>Mobile<span class="w3-right">+639134567890</span></li>
+			<li>Email<span class="w3-right"><a base target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=juan_d@gmail.com&su=TSO_Notification&shva=1">juan_d@gmail.com</a></span></li>
+			<li>Home Address<span class="w3-right"><a base target="_blank" href="https://maps.google.com/?q=McKinley Street, Ligao City">McKinley St, Ligao City</a></span></li>
+			<li>Current Address<span class="w3-right"><a base target="_blank" href="https://maps.google.com/?q=Rizal Street, Legazpi City">Rizal St, Ligao City</a></span></li>
+		</ul>
+		
+		<h4><b>About</b></h4>
+			<p>An upright officer of COA Region Five</p>
+	</div>
+<div class="w3-container">
+
+	
+</div>
+</div>
+<?php include 'common/footer.php'?>

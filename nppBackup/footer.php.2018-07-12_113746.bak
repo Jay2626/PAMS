@@ -1,0 +1,26 @@
+<body>
+</html>
+<script>
+//for custom scrollbar
+$(".p-scroll")
+.niceScroll({
+	cursorcolor:"#dddddd", 
+	cursorwidth:"12px", 
+	background:"#f1f1f1",
+	opacity:"0.9", 
+	cursorborder:"0px solid #ddd", 
+	cursorborderradius:"5px",
+	});
+//datatable
+$(document).ready(function(){
+	$('#table_id').DataTable();
+});
+//modal open
+function p_modal(id) {
+document.getElementById(id).style.display='block';
+}
+//modal close
+function p_close(id) {
+document.getElementById(id).style.display='none';
+}
+</script>

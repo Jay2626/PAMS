@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PAMS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="src/css/w3.css">
+	<link rel="stylesheet" href="src/css/pams.css">
+	<!-- jQuery -->
+	<script src="src/js/jquery-3.3.1.min.js"></script>
+	<!-- Materialize-->
+	<link rel="stylesheet" href="src/css/materialize.css">
+	<script src="src/js/materialize.js"></script>
+	<script src="src/js/init.js"></script>
+	<!-- icons -->
+	<link rel="stylesheet" href="src/icons/material-icons/material-icons.css">
+	
+</head>
+<body class="w3-content w3-display-container" style="height: 900px;
+background-image: url('src/img/coa_bg30.png');
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+">
+
+	
+	<!-- login -->
+	<div class="w3-display-middle w3-col l6 m6 s12 w3-card-4 w3-round-large w3-white" style="opacity:1; padding:24px;">
+		<!-- middle -->
+		<div class="w3-container w3-text-dark-gray">
+			<h5>PROJECT ASSIGMENT MANAGEMENT SYSTEM</h5>
+		</div>
+		<div class="w3-container w3-padding-24">
+			<h5>Sign in</h5>
+			<p>with your account</p>
+		</div>
+
+		<form id="form" method="post" action="function/submit_login.php" class="w3-container">
+			<div class="input-field">
+				<input id="u" type="text" class="validate">
+				<label for="u">Username</label>
+			</div>
+			<div class="input-field">
+				<input id="p" type="text" class="validate">
+				<label for="p">Password</label>
+			</div>
+			<br>
+			<div class="w3-bar">
+			<a class="w3-button w3-text-gray">Forgot password?</a>
+			<button id="submit" type="button" onclick="pvalid()" class="w3-button w3-round w3-right w3-card w3-blue">LOGIN</button>
+			</div>
+			<br><br>
+			</div>
+		</form>
+	</div>
+
+			<script>
+			$( '.js-float-label-wrapper' ).FloatLabel();
+			</script>
+</body>
+<script>
+</script>
+</html>

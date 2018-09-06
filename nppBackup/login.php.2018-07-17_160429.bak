@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PAMS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="src/css/w3.css">
+	<link rel="stylesheet" href="src/css/pams.css">
+	<!-- jQuery -->
+	<script src="src/js/jquery-2.2.4.min.js"></script>
+	<!-- FloatLabel -->
+	<link rel="stylesheet" href="src/plugins/jquery.FloatLabel.css">
+	<script src="src/plugins/jquery.FloatLabel.js"></script>
+	<!-- icons -->
+	<link rel="stylesheet" href="src/icons/material-icons/material-icons.css">
+	
+</head>
+<body class="w3-content w3-display-container" style="height: 900px;
+background-image: url('src/img/coa_bg30.png');
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+">
+
+	
+	<!-- login -->
+	<div class="w3-display-middle w3-col l6 m6 s12 w3-card-4 w3-white" style="opacity:0.5;">
+		<!-- top -->
+		<div class="w3-bar p-blue">
+			<div class="w3-col l3 w3-center w3-container w3-content">
+			<img class="w3-image w3-padding-24 w3-container" src="src/img/logo-coa.png">
+			</div>
+			<div class="w3-col l9"  style="text-shadow:2px 2px 10px #444; line-height:300px">
+				<h5 class="w3-padding-24 w3-container" style="line-height:20px">Commission on Audit Region 5<br>Technical Services</h5>
+			</div>
+		</div>
+		<!-- middle -->
+		<div class="w3-container w3-blue-gray w3-center">
+		<h4>PROJECT ASSIGNING MANAGEMENT SYSTEM</h4>
+		</div>
+		<div class="w3-container w3-padding-24">
+		<h3>Sign in with your account</h3>
+		</div>
+		<div class="w3-container w3-content w3-bar w3-white w3-center w3-hide">
+			<h2>
+			<!-- Avatar -->
+			<button class="w3-circle w3-border-0 w3-dark-gray" style="height:80px; width:80px; font-size:55px;"></button>
+			</h2>
+			<h3>
+		</div>
+		<form id="form" method="post" action="function/submit_login.php" class="w3-container">
+			<div id="user_container"class="js-float-label-wrapper">
+				<label for="user" class="w3-text-blue w3-small">Username</label>
+				<input id="user" class="w3-input" type="text" name="user" autocomplete="off" style="width:100%;outline:0">
+			</div>
+			<br>
+			
+			<div id="pass_container"class="js-float-label-wrapper">
+				<label class="w3-text-blue w3-small">Password</label>
+				<div  class="w3-diplay-container">
+					<input id="pass" class="w3-bar-item w3-input" type="password" name="pass" style="width:100%;outline:0">
+					<div class="w3-display-bottomright" style="margin-bottom:2px">
+						<button id="pass_btn" type="button" onclick="show()" class="w3-border-0 w3-white w3-hover-text-blue-gray w3-text-gray" style="width:100%;outline:0"><i id="eye" class="material-icons">visibility</i></button>
+					</div>
+					
+				</div>
+			</div>	
+			<br>
+			<div class="w3-bar">
+			<a class="w3-button w3-text-gray">Forgot password?</a>
+			<button id="submit" type="button" onclick="pvalid()" class="w3-button w3-round w3-right w3-card w3-blue">LOGIN</button>
+			</div>
+			<br><br>
+			</div>
+		</form>
+	</div>
+
+			<script>
+			$( '.js-float-label-wrapper' ).FloatLabel();
+			</script>
+</body>
+<script>
+//used to toogle visibility of password
+function show(){
+	var x = document.getElementById("eye");
+	var y = document.getElementById("pass");
+	if(x.innerHTML == "visibility"){
+		x.innerHTML = "visibility_off";
+		y.type = "text";
+	}else{
+		x.innerHTML = "visibility";
+		y.type = "password";
+	}
+}
+//parsley validate
+//$('#form').parsley();
+
+//validation
+function pvalid(){
+	var s = document.getElementById("submit");
+	var u = document.getElementById("user");
+	var uc = document.getElementById("user_container");
+	var ub = document.getElementById("user_btn");
+	var p = document.getElementById("pass");
+	var pc = document.getElementById("pass_container");
+	var pb = document.getElementById("pass_btn");
+	//validates username
+	if(u.value == ""){
+		u.classList.remove("w3-pale-green");
+		uc.classList.remove("w3-pale-green");
+		ub.classList.remove("w3-pale-green");
+		u.classList.add("w3-pale-red");
+		uc.classList.add("w3-pale-red");
+		ub.classList.add("w3-pale-red");
+	}else{
+		u.classList.add("w3-pale-green");
+		uc.classList.add("w3-pale-green");
+		ub.classList.add("w3-pale-green");
+	}
+	//validates password
+	if(p.value == ""){
+		p.classList.remove("w3-pale-green");
+		pc.classList.remove("w3-pale-green");
+		pb.classList.remove("w3-pale-green");
+		p.classList.add("w3-pale-red");
+		pc.classList.add("w3-pale-red");
+		pb.classList.add("w3-pale-red");
+	}else{
+		p.classList.add("w3-pale-green");
+		pc.classList.add("w3-pale-green");
+		pb.classList.add("w3-pale-green");
+	}
+	//changes button type to submit
+	if(u.value == ""){
+		s.type = "button";
+	}else{
+		s.type = "submit";
+	}
+
+}	
+</script>
+</html>

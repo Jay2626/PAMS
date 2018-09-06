@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+<title>PAMS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="src/css/w3.css">
+	<link rel="stylesheet" href="src/css/pams.css">
+	<!-- icons -->
+	<link rel="stylesheet" href="src/icons/material-icons/material-icons.css">
+	
+</head>
+<body>
+<img src="src/img/svg/COA_DARK.svg">
+</body>
+</html>

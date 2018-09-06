@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+	<!-- jQuery -->
+	<script src="src/js/jquery-3.3.1.min.js"></script>
+	<!-- Material Design Lite--
+	<link rel="stylesheet" href="src/css/material.min.css">
+	<script src="src/js/material.min.js"></script>-->
+	<!-- Materialize-->
+	<link rel="stylesheet" href="src/css/materialize.css">
+	<script src="src/js/materialize.js"></script>
+	<!-- Material Icons -->
+	<link rel="stylesheet" href="src/icons/material-icons/material-icons.css">
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<!-- nicescroll-->
+	<script src="src/plugins/nicescroll/jquery.nicescroll.min.js"></script>
+	<!-- datatables -->
+	<link rel="stylesheet" type="text/css" href="src/plugins/DataTables/datatables.css">
+	<script src="src/plugins/DataTables/datatables.js"></script>
+	<!-- W3.CSS-->
+	<link rel="stylesheet" href="src/css/w3.css">
+	<link rel="stylesheet" href="src/css/pams.css">
+
+</head>
+<body class="" style="font-family: 'Roboto', sans-serif;">
+<!-- sidebar -->
+<div id="pSidebar" class="w3-sidebar w3-light-gray w3-col l2 w3-hide-small w3-hide-medium  scale-transition">
+	<!-- sidebar header -->
+	<div class="w3-container w3-blue-gray">
+		<div class="w3-bar w3-padding-large">
+			<img class="w3-image w3-circle" src="src/img/ru/rum4.jpg" style="height:80px">
+		</div>
+		<div class="w3-bar">
+			<h4 class="w3-bar-item">Juan Dela Cruz</h4>
+			<div class="w3-bar-item w3-right">
+				<button onclick="myFunction('Demo1')" class="waves-light btn-floating btn-flat w3-hover-gray w3-right">
+					<i class="material-icons">arrow_drop_down</i>
+				</button>
+			</div>
+			<script>
+			function myFunction(id) {
+				var x = document.getElementById(id);
+				if (x.className.indexOf("w3-show") == -1) {
+					x.className += " w3-show";
+				} else { 
+					x.className = x.className.replace(" w3-show", "");
+				}
+			}
+			</script>
+		</div>
+	</div>
+	<!-- sidebar links -->
+	<div class="w3-bar-block  w3-content w3-text-dark-gray">
+		<div class="w3-dark-gray w3-text-white w3-hide" id="Demo1">
+			<a href="index.php" class="waves-effect w3-bar-item w3-button w3-padding-large">
+				<i class="material-icons">account_circle</i>&emsp;Profile</a>
+			<a href="index.php" class="waves-effect w3-bar-item w3-button w3-padding-large">
+				<i class="material-icons">settings</i>&emsp;Settings</a>
+			<a href="index.php" class="waves-effect w3-bar-item w3-button w3-padding-large">
+				<i class="material-icons">exit_to_app</i>&emsp;Logout</a>
+		</div>
+		
+		<a href="index.php" class="waves-effect w3-bar-item w3-button w3-padding-large">
+			<i class="material-icons">home</i>&emsp;Home</a>
+			
+		<a onclick="p_modal('add_project')"  class="waves-effect w3-bar-item w3-button w3-padding-large">
+			<i class="material-icons">add</i>&emsp;Create Project</a>
+			<?php include 'projects_modal.php'?>
+			
+		<a onclick="p_modal('add_sao')" class="waves-effect w3-bar-item w3-button w3-padding-large">
+			<i class="material-icons">note_add</i>&emsp;Create SAO</a>
+			<?php include 'sao_modal.php'?>
+			
+		<a href="projects.php" class="waves-effect w3-bar-item w3-button w3-padding-large">
+			<i class="material-icons">work</i>&emsp;Projects</a>
+		<a href="sao_records.php" class="waves-effect w3-bar-item w3-button w3-padding-large">
+			<i class="material-icons">book</i>&emsp;SAO Records</a>
+		<a href="reports.php" class="waves-effect w3-bar-item w3-button w3-padding-large">
+			<i class="material-icons">assessment</i>&emsp;Reports</a>
+		<a href="profiles.php" class="waves-effect w3-bar-item w3-button w3-padding-large">
+			<i class="material-icons">account_box</i>&emsp;Profiles</a>
+		<a href="ipcr.php" class="waves-effect w3-bar-item w3-button w3-padding-large">
+			<i class="material-icons">show_chart</i>&emsp;IPCR</a>
+		<a href="archives.php" class="waves-effect w3-bar-item w3-button w3-padding-large">
+			<i class="material-icons">archive</i>&emsp;Archives</a>
+	</div>
+</div>
+<script>
+//for custom scrollbar
+$(".w3-sidebar")
+.niceScroll({
+	cursorcolor:"#dddddd", 
+	cursorwidth:"12px", 
+	background:"rgba(0,0,0,0.1)",
+	opacity:"0.9", 
+	cursorborder:"0px solid #ddd", 
+	cursorborderradius:"5px",
+	});
+</script>
+<script src="src/js/init.js"></script>

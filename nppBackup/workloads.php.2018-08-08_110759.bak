@@ -1,0 +1,111 @@
+<?php include 'common/sidebar.php'?>
+<!-- navbar -->
+<div id="pContent" class="w3-col l10 m12 s12 w3-right">
+<div class="w3-container w3-bar w3-light-gray w3-text-gray w3-card w3-display-container">
+	<a id="pCloseSidebar" onclick="p_close_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:block;"><i class="material-icons w3-display-left">&nbsp;&nbsp;menu</i></a>
+	<a id="pOpenSidebar" onclick="p_open_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:none;"><i class="material-icons w3-display-left">&nbsp;&nbsp;close</i></a>
+	<h2 class="w3-bar-item">Workloads</h2>
+</div>
+<div class="w3-bar w3-gray w3-padding w3-container w3-text-white" style="">
+	<div class="w3-bar-item w3-col l3 w3-center w3-red" style="height:100%;">
+		<h1 class="w3-jumbo">AUGUST</h1>
+		<h1 class="w3-xxxlarge">2018</h1>
+	</div>
+	<div class="w3-container w3-col l5 w3-center w3-green" style="">
+		<div class="ct-chart ct-major-eleventh" id="chart"></div>
+		<script>
+		// Initialize a Line chart in the container with the ID chart1
+		new Chartist.Line('#chart', {
+			labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5'],
+			series: [[100, 120, 180, 200, 300]],
+			}
+		);
+		</script>
+	</div>
+</div>
+<div class="w3-container">
+	<h2 class="w3-text-gray">Workload</h2><br>
+	<div class="w3-row-padding">
+		<div class="w3-col l2 m3 s4" style="margin-bottom:10">
+			<div class="w3-card w3-round-large w3-padding">
+				<div class="w3-center w3-padding-16">
+					<img class="w3-image w3-circle w3-center" style="height:80px" src="src/img/ru/ruf1.jpg">
+				</div>
+				<div class="w3-center" style="line-height: 0.5;">
+					<p>Engr. Cruz</p>
+				</div>
+				<div class="w3-light-grey w3-round-large">
+					<div class="w3-green w3-round-large" style="height:20px;width:50%; text-align: center">50%</div>
+				</div>
+			</div>
+		</div>
+		<div class="w3-col l2 m3 s4">
+			<div class="w3-card w3-round-large w3-padding">
+				<div class="w3-center w3-padding-16">
+					<img class="w3-image w3-circle w3-center" style="height:80px;" src="src/img/ru/rum1.jpg">
+				</div>
+				<div class="w3-center" style="line-height: 0.5;">
+					<p>Engr. Cruz</p>
+				</div>
+				<div class="w3-light-grey w3-round-large">
+					<div class="w3-red w3-round-large" style="height:20px;width:90%; text-align: center">90%</div>
+				</div>
+			</div>			
+		</div>
+		<div class="w3-col l2 m3 s4">
+			<div class="w3-card w3-round-large w3-padding">
+				<div class="w3-center w3-padding-16">
+					<img class="w3-image w3-circle w3-center" style="height:80px;" src="src/img/ru/rum2.jpg">
+				</div>
+				<div class="w3-center" style="line-height: 0.5;">
+					<p>Engr. Cruz</p>
+				</div>
+				<div class="w3-light-grey w3-round-large">
+					<div class="w3-green w3-round-large" style="height:20px;width:75%; text-align: center">75%</div>
+				</div>
+			</div>			
+		</div>	
+		<div class="w3-col l2 m3 s4">
+			<div class="w3-card w3-round-large w3-padding">
+				<div class="w3-center w3-padding-16">
+					<img class="w3-image w3-circle w3-center" style="height:80px;" src="src/img/ru/ruf2.jpg">
+				</div>
+				<div class="w3-center" style="line-height: 0.5;">
+					<p>Engr. Cruz</p>
+				</div>
+				<div class="w3-light-grey w3-round-large">
+					<div class="w3-red w3-round-large" style="height:20px;width:100%; text-align: center">100%</div>
+				</div>
+			</div>			
+		</div>	
+		<div class="w3-col l2 m3 s4">
+			<div class="w3-card w3-round-large w3-padding">
+				<div class="w3-center w3-padding-16">
+					<img class="w3-image w3-circle w3-center" style="height:80px;" src="src/img/ru/rum3.jpg">
+				</div>
+				<div class="w3-center" style="line-height: 0.5;">
+					<p>Engr. Cruz</p>
+				</div>
+				<div class="w3-light-grey w3-round-large">
+					<div class="w3-green w3-round-large" style="height:20px;width:60%; text-align: center">60%</div>
+				</div>
+			</div>			
+		</div>	
+		<div class="w3-col l2 m3 s4">
+			<div class="w3-card w3-round-large w3-padding">
+				<div class="w3-center w3-padding-16">
+					<img class="w3-image w3-circle w3-center" style="height:80px;" src="src/img/ru/ruf3.jpg">
+				</div>
+				<div class="w3-center" style="line-height: 0.5;">
+					<p>Engr. Cruz</p>
+				</div>
+				<div class="w3-light-grey w3-round-large">
+					<div class="w3-green w3-round-large" style="height:20px;width:25%; text-align: center">25%</div>
+				</div>
+			</div>			
+		</div>			
+	</div>
+	
+</div>
+</div>
+<?php include 'common/footer.php'?>

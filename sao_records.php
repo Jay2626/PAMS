@@ -1,0 +1,81 @@
+<?php 
+$page = "sao";
+include 'common/sidebar.php'?>
+<!-- navbar -->
+<div id="pContent" class="w3-col l10 m12 s12 w3-right">
+<div class="w3-container w3-bar w3-light-gray w3-text-gray w3-card w3-display-container">
+	<a id="pCloseSidebar" onclick="p_close_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:block;"><i class="material-icons w3-display-left">&nbsp;&nbsp;menu</i></a>
+	<a id="pOpenSidebar" onclick="p_open_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:none;"><i class="material-icons w3-display-left">&nbsp;&nbsp;close</i></a>
+	<h2 class="w3-bar-item">SAO Records</h2>
+</div>
+<!-- Square1 -->
+	<div class="w3-container w3-padding w3-green w3-center w3-col l4 m4 s4">
+		<h1 class="w3-xlarge">Completed</h1>
+		<h1 class="w3-xxxlarge">2089</h1>
+	</div>
+	<!-- Square2 -->
+	<div class="w3-container w3-padding w3-blue w3-center w3-col l4 m4 s4">
+		<h1 class="w3-xlarge">Ongoing</h1>
+		<h1 class="w3-xxxlarge">34</h1>
+	</div>
+	<!-- Square3 -->
+	<div class="w3-container w3-padding w3-red w3-center w3-col l4 m4 s4">
+		<h1 class="w3-xlarge">Incomplete</h1>
+		<h1 class="w3-xxxlarge">1026</h1>
+	</div>
+	<div class="w3-container"><br>
+		<div class="w3-bar w3-round-large w3-card">
+			<a onclick="p_modal('add_sao')" class="waves-effect w3-bar-item w3-button w3-text-blue-gray">
+			<i class="material-icons w3-medium">edit</i> Create SAO</a>
+			<?php include 'modal/sao_modal.php'?>
+			<a class="w3-bar-item w3-button w3-text-blue-gray"><i class="material-icons w3-medium">keyboard_arrow_left</i>Previous</a>
+			<a class="w3-bar-item w3-button w3-text-blue-gray">Next<i class="material-icons w3-medium">keyboard_arrow_right</i></a>
+			<a class="w3-bar-item w3-button w3-text-blue-gray">All</a>
+			<a class="w3-bar-item w3-button w3-text-blue-gray">Today</a>
+			<a class="w3-bar-item w3-button w3-text-blue-gray">This Month</a>
+			<a class="w3-bar-item w3-button w3-text-blue-gray dropdown-trigger" data-target='by-date-drop'>By Date</a>
+			<a class="w3-bar-item w3-button  w3-text-blue-gray">By Status</a>	
+		</div>
+		<!-- Dropdown Structure -->
+		<ul id="by-date-drop" class="dropdown-content" style="width:500px !important">
+			<li><h3>Choose Month</h3></li>
+			<li><a href="#!">two asdfadfs  sdfds</a></li>
+			<li class="divider" tabindex="-1"></li>
+			<li><a href="#!">three</a></li>
+			<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+			<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+		</ul><br>
+		<table  id="table_idx" class="dataTable w3-table w3-striped w3-responsive">
+			<thead class="w3-light-gray w3-text-black">
+				<th>SAO ID</th>
+				<th>Reference No</th>
+				<th>Recieved Date</th>
+				<th>Entry Date</th>
+				<th style="width:30%">Projects</th>
+				<th>Assigned Personnel</th>
+				<th>Status</th>
+				<th>Action</th>
+			</thead>		
+			<tr class="w3-hover-light-gray">
+				<td>SAO-1234</td>
+				<td>RN-1234</td>
+				<td>10/10/2017</td>
+				<td>10/20/2017</td>
+				<td>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu maximus augue. Quisque vel lacus eu metus pretium cursus sit amet in diam.
+				<span class="w3-text-blue w3-hover-text-red">&emsp;More <i class="material-icons w3-small">keyboard_arrow_down</i></span>
+				</td>
+				<td>
+				<a onclick="p_modal('p_details')" class="w3-hover-text-red">Juan Dela Cruz</a>
+				<br>
+				<a onclick="p_modal('p_details')" class="w3-hover-text-red">Maria Makiling</a>			
+				</td>
+				<td><span class="w3-tag w3-round-xlarge w3-blue">Ongoing</span></td>
+				<td class="w3-center"><i class="material-icons" onclick="p_modal('pr_details')">keyboard_arrow_down</i></td>
+			</tr>
+		</table>
+</div>
+</div>
+<?php include 'modal/project_details_modal.php'?>
+<?php include 'modal/personnel_details_modal.php'?>
+<?php include 'common/footer.php'?>

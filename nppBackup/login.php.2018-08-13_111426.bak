@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+<title>PAMS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="src/css/w3.css">
+	<link rel="stylesheet" href="src/css/pams.css">
+	<!-- jQuery -->
+	<script src="src/js/jquery-3.3.1.min.js"></script>
+	<!-- Materialize-->
+	<link rel="stylesheet" href="src/css/materialize.css">
+	<script src="src/js/materialize.js"></script>
+	<script src="src/js/init.js"></script>
+	<!-- icons -->
+	<link rel="stylesheet" href="src/icons/material-icons/material-icons.css">
+	
+</head>
+<body class=""
+style="background-image: url('src/img/coa_bg30.png');
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+">
+
+	
+	<!-- login -->
+	<div class="w3-display-middle w3-col l3 m6 s12 w3-card-4 w3-round-large w3-white" style="opacity:1; padding:24px;">
+		<!-- middle -->
+		<div class="w3-container w3-text-dark-gray w3-center">
+		<h3 onclick="changeText(this)"><span class="w3-text-red"><b>P</b></span>
+			<span class="w3-text-blue"><b>A</b></span>
+			<span class="w3-text-red"><b>M</b><span>
+			<span class="w3-text-blue"><b>S</b></span></h3>
+			<script>
+			function changeText(id) {
+			id.innerHTML = "";
+			}
+			</script>
+			<h4 class="">
+			<span class="w3-text-blue-gray">Project &nbsp;</span>
+			<span class="w3-text-blue">Assignment</span>
+			<br>
+			<span class="w3-text-red">Management</span>
+			<span class="w3-text-gray"> System</span>
+			</h4>
+		</div>
+		<div class="w3-container w3-padding-24 w3-text-dark-gray">
+			<h5>Sign in</h5>
+			<p>with your account</p>
+		</div>
+
+		<form id="" method="post" action="function/submit_login.php" class="w3-container ">
+			<div class="input-field">
+				<input id="u" name="username" type="text" class="validate" autofocus>
+				<label for="u">Username</label>
+			</div>
+			<div class="input-field">
+				<input id="p" name="password" type="password" class="validate">
+				<label for="p">Password</label>
+			</div>
+			<br>
+			<div class="w3-bar">
+			<a class="w3-text-gray">Forgot password?</a>
+			<button type="submit" class="w3-button w3-round w3-right w3-card w3-blue">LOGIN</button>
+			</div>
+			<br><br>
+		</form>
+	</div>
+</body>
+
+</html>

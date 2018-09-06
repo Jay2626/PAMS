@@ -1,0 +1,15 @@
+<?php
+include('../common/config.php');
+$f = new Functions;
+$username = $_POST['user'];
+$password = $_POST['pass'];
+$search = $f->query("SELECT * FROM accounts WHERE username = '$username' AND password = '$password'");
+$result = $search->fetch_assoc();
+if($result['username'] == ""){
+		header('Location:../login.php?error=1');
+		} 
+else{
+			$_SESSION['username'] = $result['username'];
+			header('Location:..\index.php');
+		}
+?>

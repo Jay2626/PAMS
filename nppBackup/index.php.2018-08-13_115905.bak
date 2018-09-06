@@ -1,0 +1,19 @@
+<?php include 'common/sidebar.php'?>
+<!-- navbar -->
+<div id="pContent" class="w3-col l10 m12 s12 w3-right">
+<div class="w3-container w3-bar w3-light-gray w3-text-gray w3-card w3-display-container">
+	<a id="pCloseSidebar" onclick="p_close_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:block;"><i class="material-icons w3-display-left">&nbsp;&nbsp;menu</i></a>
+	<a id="pOpenSidebar" onclick="p_open_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:none;"><i class="material-icons w3-display-left">&nbsp;&nbsp;close</i></a>
+	<h2 class="w3-bar-item">Home</h2>
+</div>
+<div class="w3-bar w3-container w3-padding-32">
+	<div class="w3-bar-item w3-container w3-container w3-text-blue-gray w3-center">
+		<h1 class="w3-xxxlarge">Welcome to PAMS!</h1>
+	</div>
+	<div class="w3-bar-item w3-right w3-container w3-blue w3-round-large w3-center">
+		<h1 class="">August</h1>
+		<h1 class="w3-jumbo">10</h1>
+	</div>
+</div>
+</div>
+<?php include 'common/footer.php'?>

@@ -1,0 +1,43 @@
+<?php include 'common/sidebar.php'?>
+<!-- navbar -->
+<div class="w3-col l10 m12 s12 w3-right">
+<div class="w3-container w3-bar w3-light-gray w3-text-gray w3-card w3-display-container">
+	<a class="w3-button w3-hover-none w3-hover-text-blue"><i class="material-icons w3-display-left">&nbsp;&nbsp;menu</i></a>
+	<h2 class="w3-bar-item">&nbsp;&nbsp;Employees</h2>
+</div>
+<!-- main content -->
+<div class="w3-container w3-padding-32">
+	<div class="w3-bar w3-round-large w3-card">
+		<a  href="employee_add.php" class="w3-bar-item w3-button w3-white w3-text-blue-gray"><i class="material-icons w3-large">person_add</i> Add Personnel</a>
+		<a class="w3-bar-item w3-button w3-white w3-text-blue-gray"><i class="material-icons w3-large">photo</i> Card View</a>
+		<a class="w3-bar-item w3-button w3-white w3-text-blue-gray"><i class="material-icons w3-large">border_all</i> Table View</a>
+		<a href="accounts.php" class="w3-bar-item w3-button w3-white w3-text-blue-gray"><i class="material-icons w3-large">list</i> View Accounts</a>
+	</div>
+<br>
+<div class="w3-row-padding">
+	<?php include 'function/config.php';
+	$f = new Functions;
+	
+	$get_employee = $f->query("SELECT CONCAT(emp_firstname, emp_middlename, ' ', emp_lastname) AS fullname, employee_id FROM employees");
+	
+	while($employee = $get_employee->fetch_assoc()){
+		echo $employee;
+		if($employee == null){ echo "$";}
+	?>
+	<div class="w3-col l2 s4" style="padding-bottom:16px">
+		<div class="w3-display-container w3-hover-opacity">
+			<img class="w3-image" style="" src="src/img/ru/ruf2.jpg">
+			<div class="w3-display-bottomleft w3-bar w3-padding-small w3-text-white w3-image" style="text-shadowr:1px 1px 5px #111111; background: rgba(0, 0, 0, 0.2)">
+				<h5 style="margin:2px;"><?php echo $employee['fullname'];?></h5>
+				<span><i class="material-icons w3-text-ble w3-medium">account_circle</i> TAS I <?php echo $employee['employee_id'];?></span>
+			</div>
+			<div class="w3-display-middle w3-display-hover">
+				<a class="w3-white w3-round-xlarge w3-button w3-hover-blue">View<a>
+			</div>
+		</div>
+	</div>
+	<?php } ?>
+</div>
+</div>
+</div>
+<?php include 'common/footer.php'?>

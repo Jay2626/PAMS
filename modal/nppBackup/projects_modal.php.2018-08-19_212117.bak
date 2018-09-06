@@ -1,0 +1,70 @@
+<!-- modal add projects-->
+<div id="add_project" class="w3-modal">
+	<div class="w3-modal-content w3-card-4 w3-animate-top" style="opacity:1;">
+		<header class="w3-container w3-padding-16 w3-blue-gray card"> 
+			<span onclick="p_close('add_project')" class="w3-button w3-display-topright">&times;</span>
+		<h2>Add Project</h2>
+		</header>
+		<!-- main content -->
+		<div class="w3-container">
+		<br>
+		<div class="row">
+			<form class="col s12">		          
+			<div class="row">
+				<div class="input-field col s6">
+				  <input value="PR-1234" id="ref_id" type="text" class="validate">
+				  <label for="ref_id">Reference No</label>
+				</div>
+				<div class="input-field col s6">
+				  <input disabled value="PR-1234" id="project_id" type="text" class="validate">
+				  <label for="project_id">Project ID</label>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="input-field col s12">
+				  <textarea id="title" type="text" class="materialize-textarea validate"></textarea>
+				  <label for="title">Title</label>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="input-field col s6">
+				  <input id="ra" type="text" class="validate">
+				  <label for="ra">Requesting Agency</label>
+				</div>
+				<div class="input-field col s6">
+				  <input id="aa" type="text" class="validate">
+				  <label for="aa">Agency Address</label>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="input-field col s6">
+				  <input id="cos" type="text" class="validate">
+				  <label for="cos">Cost</label>
+				</div>
+				<div class="input-field col s6">
+				  <input id="con" type="text" class="validate">
+				  <label for="con">Contractor</label>
+				</div>
+			  </div>
+			<div class="row">
+			  <div class="input-field col s6">
+                <select multiple>	
+                  <option value="" disabled>Select Project</option>
+                  <option value="1">Infrastructure</option>
+                  <option value="2">Supply</option>
+                  <option value="3">Labor</option>
+                  <option value="3">Delivery</option>
+                  <option value="3">Unserviciable Property</option>
+                  <option value="3">Real Property</option>
+                </select>
+                <label>Project Type</label>
+              </div>
+			  <div class="input-field col s6">
+			  </div>
+			 </div>
+			  
+			</form>
+		  </div>
+		</div>
+	</div>
+</div>

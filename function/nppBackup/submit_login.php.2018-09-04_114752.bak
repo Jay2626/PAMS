@@ -1,0 +1,22 @@
+<?php
+//start session
+session_start();
+include('config.php');
+$f = new Functions;
+//$username = $_POST['username'];
+//$password = $_POST['password'];
+$search = $f->query("SELECT * FROM accounts WHERE ac_username = 'pamie' AND ac_password = '1234'");
+$result = $search->fetch_assoc();
+$_SESSION['username'] = $result['ac_username'];
+echo $_SESSION['username'];
+
+if($result['ac_username'] == ""){
+		header('Location:../login.php?error=1');
+} 
+else{
+	$_SESSION['username'] = $result['ac_username'];
+	
+	header('Location:..\index.php');
+}
+
+?>

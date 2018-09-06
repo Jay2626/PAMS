@@ -1,0 +1,68 @@
+<?php include 'common/sidebar.php'?>
+<!-- navbar -->
+<div id="pContent" class="w3-col l10 m12 s12 w3-right">
+<div class="w3-container w3-bar w3-light-gray w3-text-gray w3-card w3-display-container">
+	<a id="pCloseSidebar" onclick="p_close_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:block;"><i class="material-icons w3-display-left">&nbsp;&nbsp;menu</i></a>
+	<a id="pOpenSidebar" onclick="p_open_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:none;"><i class="material-icons w3-display-left">&nbsp;&nbsp;close</i></a>
+	<h2 class="w3-bar-item">Add Employee</h2>
+</div>
+<div class="w3-container w3-padding-32">
+	<div class="w3-container w3-card-4 w3-col l3 w3-round-large">
+		<form>
+			<h2>Personal Details</h2>
+			<div class="input-field">
+				<input id="f" type="text" />
+				<label for="f">Firstname</label>
+			</div>
+			<div class="input-field">
+				<input id="m" type="text" />
+				<label for="m">Middlename</label>
+			</div>
+			<div class="input-field">
+				<input id="l" type="text" />
+				<label for="l">Lastname</label>
+			</div>
+			<div class="input-field">
+				<input id="s" type="text" />
+				<label for="s">Sex</label>
+			</div>
+			<div class="input-field">
+				<input id="d" type="text" />
+				<label for="d">Date of Birth</label>
+			</div>
+			<br>
+			<div class="input-field">
+				<select class="icons" multiple>
+					<option value="" disabled>Choose</option>
+					<option value="" data-icon="src/img/ru/rum1.jpg">TAS I</option>
+					<option value="" data-icon="src/img/ru/ruf2.jpg">TAS II</option>
+					<option value="" data-icon="src/img/ru/ruf1.jpg">TAS III</option>
+				</select>
+				<label>Choose Position</label>
+			</div>
+			<br>
+			<div class="input-field">
+				<select class="icons" multiple>
+					<option value="" disabled>Choose</option>
+					<option value="" data-icon="src/img/ru/rum1.jpg">TAS I</option>
+					<option value="" data-icon="src/img/ru/ruf2.jpg">TAS II</option>
+					<option value="" data-icon="src/img/ru/ruf1.jpg">TAS III</option>
+				</select>
+				<label>Choose Position</label>
+			</div>
+			<div class="file-field input-field w3-hide">
+				<div class="btn">
+					<span>File</span>
+					<input type="file">
+				</div>
+				<div class="file-path-wrapper">
+					<input class="file-path validate" type="text">
+				</div>
+			</div>
+			</form>
+	</div>
+</div>
+</div>
+<body>
+</html>
+<?php include 'common/footer.php'?>

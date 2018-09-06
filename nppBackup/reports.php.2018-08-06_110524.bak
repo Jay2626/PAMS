@@ -1,0 +1,24 @@
+<?php include 'common/sidebar.php'?>
+<!-- navbar -->
+<div id="pContent" class="w3-col l10 m12 s12 w3-right">
+<div class="w3-container w3-bar w3-light-gray w3-text-gray w3-card w3-display-container">
+	<a id="pCloseSidebar" onclick="p_close_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:block;"><i class="material-icons w3-display-left">&nbsp;&nbsp;menu</i></a>
+	<a id="pOpenSidebar" onclick="p_open_big_sidebar()" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue" style="display:none;"><i class="material-icons w3-display-left">&nbsp;&nbsp;close</i></a>
+	<h2 class="w3-bar-item">Reports</h2>
+</div>
+<div class="w3-bar w3-container">
+	<h2 class="w3-bar-item">Hello</h2>
+	<div class="w3-container" >
+		<div class="ct-chart ct-golden-section" id="chart"></div>
+		
+		<script>
+		// Initialize a Line chart in the container with the ID chart1
+		new Chartist.Bar('#chart', {
+			labels: [1, 2, 3, 4],
+			series: [[100, 120, 180, 200]]
+		});
+		</script>
+	</div>
+</div>
+</div>
+<?php include 'common/footer.php'?>
